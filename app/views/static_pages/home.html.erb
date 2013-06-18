@@ -1,2 +1,59 @@
-<h1>StaticPages#home</h1>
-<p>Find me in app/views/static_pages/home.html.erb</p>
+<!DOCTYPE html>
+<html lang="en">
+    <head> 
+     <title>Test title</title>       
+    </head>
+    
+<body>
+  <div class="container">
+    <form name="myForm" onsubmit="return validateForm()">
+    <div class="container-fluid">
+      <div class="row-fluid">
+        <div class="span6">
+          <%= link_to image_tag("pink-spanky-shirt.jpeg", alt: "T-shirt image") %>
+        </div>
+
+        <div class="span6">
+        <input type='email' name='email' placeholder="Email address" required><br>
+        <input type='text' name='Address1' required placeholder="Address1"><br>
+        <input type='text' name='Address2' placeholder='Address2' required><br>
+        <input type='text' name='Address3' placeholder='Address3' required><br>
+        <input type='text' name='Town' placeholder='Town' required><br>
+        <input type='text' name='County' placeholder='County' required><br>
+        <input type='text' name='Country' placeholder='Coutry' required><br>
+        <input type='text' name='Postcode' placeholder='Postcode' required><br>
+        
+        <label class="radio">
+        <input type="radio" required name="Size" id="S" value="S">S</label>      
+        <label class="radio">
+        <input type="radio" required name="Size" id="M">M</label>
+        <label class="radio">
+        <input type="radio" required name="Size" id="L">L</label>  
+        <label class= "radio">
+        <input type="radio" required name="Size" id="XL">XL</label>         
+        </div>
+
+       <div class="row span6">
+         <br>
+         <button class="btn btn-success" type="submit">Zsofi suggests...</button>
+        </div>
+      </div>
+     </div>
+    <div class="span3 some-class">
+      </form>
+     </div>
+   </div>
+  </body>
+</html>
+
+  <script> 
+      function validateForm()
+        {
+          var x=document.forms["myForm"]["fname"].value;
+          if (x==null || x=="")
+        {
+          alert("First name must be filled out");
+          return false;
+        }
+      }
+    </script>
